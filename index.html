@@ -3,334 +3,411 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vận Tải Trường An | Xe ghép - Xe hợp đồng Hà Nội - Hải Phòng - Hạ Long</title>
-  <meta name="description" content="Dịch vụ xe ghép - xe hợp đồng tiện chuyến Hà Nội - Hải Phòng - Hạ Long. Hotline 0936 77 99 38. Chỉ từ 400K." />
-  <meta name="theme-color" content="#0b0b0b" />
+  <title>Vận Tải Trường An | Xe ghép • Xe hợp đồng</title>
+  <meta name="description" content="Xe ghép & xe hợp đồng Hà Nội – Hải Phòng – Hạ Long. Gọi là có, đi là thích!" />
 
   <style>
     :root{
-      --bg:#0b0b0b;
-      --card:#121212;
-      --text:#f4f4f4;
-      --muted:#b9b9b9;
-      --gold:#d6b25e;
-      --gold2:#f0cf7a;
-      --line:#242424;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1120px;
+      --bg:#070707;
+      --panel:#0f0f10;
+      --panel2:#111113;
+      --line:rgba(212,172,80,.22);
+      --muted:#b7b7b7;
+      --text:#f3f3f3;
+      --gold:#d8b35d;
+      --gold2:#f0d18b;
+      --shadow: 0 14px 40px rgba(0,0,0,.55);
+      --radius:18px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:
-        radial-gradient(1200px 600px at 30% -20%, rgba(214,178,94,.25), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(240,207,122,.18), transparent 55%),
-        var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 30% 0%, rgba(216,179,93,.12), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(216,179,93,.08), transparent 55%),
+                  var(--bg);
       color:var(--text);
-      line-height:1.6;
     }
     a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .wrap{max-width:1100px; margin:0 auto; padding:18px 14px 90px}
 
-    /* Topbar */
+    /* Top bar */
     .topbar{
-      position: sticky; top: 0; z-index: 50;
+      position: sticky;
+      top:0;
+      z-index: 50;
       backdrop-filter: blur(10px);
-      background: rgba(11,11,11,.72);
-      border-bottom: 1px solid rgba(214,178,94,.18);
+      background: linear-gradient(to bottom, rgba(7,7,7,.92), rgba(7,7,7,.65));
+      border-bottom:1px solid rgba(212,172,80,.12);
     }
-    .topbar .inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0; gap:12px; flex-wrap:wrap;
+    .topbar-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
-    .brand{display:flex; align-items:center; gap:12px}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 220px;
+    }
     .brand img{
-      width:44px; height:44px; border-radius:50%;
-      border:1px solid rgba(214,178,94,.5);
-      background:#000;
+      width:42px; height:42px;
+      border-radius:50%;
       object-fit:cover;
-      box-shadow: var(--shadow);
+      border:1px solid rgba(240,209,139,.45);
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      background:#000;
     }
-    .brand .title{font-weight:900; letter-spacing:.4px}
-    .brand .sub{color:var(--muted); font-size:13px; margin-top:-2px}
-
-    .actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px;
-      border-radius: 999px;
-      border:1px solid rgba(214,178,94,.35);
-      background: rgba(18,18,18,.85);
-      color:var(--text);
+    .brand .title{
       font-weight:800;
-      box-shadow: 0 10px 22px rgba(0,0,0,.25);
-      transition: transform .12s ease, border-color .12s ease, opacity .12s ease;
+      letter-spacing:.4px;
+      font-size:15px;
+      line-height:1.15;
+    }
+    .brand .sub{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(240,209,139,.28);
+      background: rgba(18,18,19,.6);
+      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+      font-weight:700;
+      font-size:13px;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(240,207,122,.75)}
-    .btn:active{transform: translateY(0); opacity:.95}
-    .btn.primary{
-      background: linear-gradient(180deg, rgba(240,207,122,.95), rgba(214,178,94,.95));
-      color:#1a1407;
-      border-color: rgba(240,207,122,.9);
+    .pill:hover{border-color: rgba(240,209,139,.48)}
+    .pill.gold{
+      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
+      color:#15110a;
+      border-color: rgba(240,209,139,.75);
     }
-    .chip{
-      font-size:12px; font-weight:900;
-      padding:6px 10px;
-      border-radius:999px;
-      background: rgba(214,178,94,.16);
-      border:1px solid rgba(214,178,94,.28);
-      color: var(--gold2);
+    .pill img.icon{
+      width:18px; height:18px;
+      border-radius:50%;
+      object-fit:cover;
+      background:#fff;
     }
 
-    /* Cards/sections */
-    .card{
-      background: rgba(18,18,18,.92);
-      border: 1px solid rgba(214,178,94,.22);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    section{padding:22px 0}
-    .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
-      margin: 8px 0 14px;
-      flex-wrap:wrap;
-    }
-    .section-title h2{margin:0; font-size:22px; letter-spacing:.2px}
-    .section-title p{margin:0; color: var(--muted); font-size:14px}
-
-    /* Hero */
-    .hero{padding:30px 0 10px}
+    /* Sections */
+    .hero{padding:22px 0 12px}
     .hero-grid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
       gap:16px;
       align-items:stretch;
     }
-    @media (max-width: 920px){ .hero-grid{grid-template-columns:1fr} }
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+    }
 
+    .card{
+      background: linear-gradient(180deg, rgba(18,18,19,.85), rgba(11,11,12,.85));
+      border:1px solid rgba(212,172,80,.18);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
     .hero-card{padding:20px}
     h1{
-      margin:0 0 8px;
-      font-size: 34px;
-      line-height: 1.15;
-      letter-spacing: .2px;
+      margin:8px 0 10px;
+      font-size:34px;
+      line-height:1.15;
+      letter-spacing:-.2px;
     }
-    .lead{color: var(--muted); margin:0 0 14px; font-size: 16px}
-    .hero-cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .lead{margin:0 0 14px; color:var(--muted); font-size:15px; line-height:1.5}
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-bottom:10px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(240,209,139,.25);
+      background: rgba(255,255,255,.03);
+      color: var(--gold2);
+      font-weight:800;
+      font-size:12px;
+    }
+
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(240,209,139,.28);
+      background: rgba(255,255,255,.03);
+      font-weight:800;
+      font-size:14px;
+    }
+    .btn:hover{border-color: rgba(240,209,139,.48)}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
+      color:#15110a;
+      border-color: rgba(240,209,139,.75);
+    }
+    .btn .ico{
+      width:18px; height:18px;
+      display:inline-flex; align-items:center; justify-content:center;
+    }
+    .btn .ico img{
+      width:18px; height:18px; border-radius:50%; object-fit:cover; background:#fff;
+    }
+
     .highlights{
       display:grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
       gap:10px;
       margin-top:14px;
     }
-    @media (max-width:520px){ .highlights{grid-template-columns:1fr} }
+    @media (max-width: 520px){
+      .highlights{grid-template-columns:1fr}
+    }
     .hl{
       padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.07);
       background: rgba(255,255,255,.02);
+      color:#e9e9e9;
+      font-weight:700;
+      font-size:13px;
     }
-    .hl b{color: var(--gold2)}
-    .note{font-size:12px; color: var(--muted); margin-top:10px}
+    .hl b{color:var(--gold2)}
 
-    .banner{padding:14px; display:flex; flex-direction:column; gap:12px}
-    .banner img{
-      width:100%;
-      border-radius: 14px;
-      border:1px solid rgba(214,178,94,.2);
-      background:#0d0d0d;
-      object-fit:cover;
-      display:block;
+    /* Banner / promo */
+    .promo-card{padding:14px}
+    .promo-title{
+      display:flex; align-items:center; gap:10px;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid rgba(240,209,139,.20);
+      background: rgba(255,255,255,.02);
+      font-weight:800;
+      margin-bottom:10px;
+      font-size:13px;
     }
     .voucher{
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(214,178,94,.32);
-      background: rgba(214,178,94,.12);
-      color: #ffefc7;
-      font-weight:900;
-      text-align:center;
+      padding:10px 12px;
+      border-radius:12px;
+      background: rgba(216,179,93,.10);
+      border:1px solid rgba(240,209,139,.24);
+      font-weight:800;
+      margin: 10px 0 12px;
+      color: var(--gold2);
+      font-size:13px;
     }
+    .note{color:var(--muted); font-size:12px; margin-top:10px}
 
     /* Pricing */
+    .section{margin-top:18px}
+    .section-title{
+      font-weight:900;
+      font-size:22px;
+      margin: 22px 0 10px;
+      letter-spacing:-.2px;
+    }
     .pricing{
       display:grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:14px;
-    }
-    @media (max-width: 980px){ .pricing{grid-template-columns:1fr} }
-    .price-card{padding:16px}
-    .route{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:10px}
-    .route b{font-size:16px}
-    .route .from{color:var(--gold2); font-weight:900}
-    .rows{border-top:1px solid rgba(255,255,255,.06); padding-top:10px}
-    .row{
-      display:flex; justify-content:space-between; gap:12px;
-      padding:8px 0;
-      border-bottom:1px dashed rgba(255,255,255,.06);
-    }
-    .row span{color:var(--muted)}
-    .row b{color:var(--gold2)}
-
-    /* Features */
-    .features{
-      display:grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
       gap:12px;
     }
-    @media (max-width: 980px){ .features{grid-template-columns: repeat(2, minmax(0,1fr));} }
-    @media (max-width: 520px){ .features{grid-template-columns: 1fr;} }
-    .feature{padding:14px}
-    .feature .icon{
-      width:38px; height:38px; border-radius:12px;
-      display:grid; place-items:center;
-      background: rgba(214,178,94,.15);
-      border:1px solid rgba(214,178,94,.28);
-      margin-bottom:10px;
-      color: var(--gold2);
-      font-weight: 900;
+    @media (max-width: 980px){
+      .pricing{grid-template-columns:1fr}
     }
-    .feature h3{margin:0 0 6px; font-size:15px}
-    .feature p{margin:0; color: var(--muted); font-size:13px}
+    .price-card{padding:14px}
+    .route{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      font-weight:900; font-size:14px;
+      margin-bottom:10px;
+    }
+    .from{color:var(--gold2)}
+    .rows{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:8px;
+    }
+    .row{
+      display:flex; justify-content:space-between; gap:10px;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px dashed rgba(240,209,139,.18);
+      background: rgba(255,255,255,.02);
+      font-weight:800;
+      font-size:13px;
+    }
+    .row span:last-child{color:var(--gold2)}
 
     /* Gallery */
     .gallery{
       display:grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap:14px;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap:10px;
     }
-    @media (max-width: 980px){ .gallery{grid-template-columns: repeat(2, 1fr);} }
-    @media (max-width: 520px){ .gallery{grid-template-columns: 1fr;} }
-    .gallery-item{overflow:hidden}
+    @media (max-width: 1020px){
+      .gallery{grid-template-columns: repeat(3, minmax(0,1fr))}
+    }
+    @media (max-width: 640px){
+      .gallery{grid-template-columns: repeat(2, minmax(0,1fr))}
+    }
+    .gallery-item{
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(240,209,139,.18);
+      background: rgba(255,255,255,.02);
+    }
     .gallery-item img{
-      width:100%;
-      height:200px;
+      width:100%; height:140px;
       object-fit:cover;
       display:block;
-      transition: transform .3s ease;
-      background:#0d0d0d;
+      filter: contrast(1.02);
     }
-    .gallery-item:hover img{transform: scale(1.05)}
     .caption{
-      padding:10px 12px;
-      font-size:14px;
-      color: var(--gold2);
-      background: rgba(0,0,0,.6);
-      border-top:1px solid rgba(255,255,255,.06);
+      padding:10px 10px;
+      color: var(--muted);
+      font-size:12px;
+      font-weight:700;
+      border-top:1px solid rgba(240,209,139,.10);
     }
-
-    /* Contact */
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 920px){ .contact-grid{grid-template-columns:1fr} }
-    .contact-card{padding:18px}
-    .bigphone{
-      font-size:28px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: var(--gold2);
-      margin: 6px 0 10px;
-    }
-    .smallmuted{color: var(--muted); margin:0}
-    .contact-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
 
     /* Footer */
     .footer{
-      padding:22px 0 36px;
-      border-top: 1px solid rgba(214,178,94,.14);
-      color: var(--muted);
-      font-size: 13px;
+      margin-top:18px;
+      padding:12px 14px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      border-top:1px solid rgba(240,209,139,.12);
     }
 
-    /* Floating buttons (Call + Zalo) */
-    .fab-wrap{
+    /* Floating buttons */
+    .float-stack{
       position: fixed;
-      right: 14px;
-      bottom: 14px;
+      right: 16px;
+      bottom: 16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
       z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
-    .fab-btn{
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(214,178,94,.45);
-      background: rgba(18,18,18,.92);
-      box-shadow: 0 10px 26px rgba(0,0,0,.35);
-      cursor: pointer;
-      user-select: none;
-      transition: transform .12s ease, opacity .12s ease, border-color .12s ease;
+    .float-btn{
+      width:56px; height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(240,209,139,.28);
+      box-shadow: 0 10px 24px rgba(0,0,0,.40);
+      background: rgba(18,18,19,.78);
+      backdrop-filter: blur(8px);
+      transform: translateZ(0);
     }
-    .fab-btn:hover{transform: translateY(-1px); border-color: rgba(240,207,122,.75)}
-    .fab-btn:active{transform: translateY(0); opacity:.95}
-    .fab-btn.primary{
-      background: linear-gradient(180deg, rgba(240,207,122,.95), rgba(214,178,94,.95));
-      color: #1a1407;
-      border-color: rgba(240,207,122,.9);
-      font-weight: 900;
+    .float-btn:hover{transform: scale(1.06)}
+    .float-btn.call{
+      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
+      border-color: rgba(240,209,139,.75);
     }
-    .fab-btn span{font-size: 22px; line-height: 1}
+    .float-btn.call svg{fill:#15110a}
+    .float-btn img{
+      width:34px; height:34px;
+      border-radius:50%;
+      object-fit:cover;
+      background:#fff;
+    }
+
+    /* Small helper */
+    .divider{
+      margin-top:12px;
+      border-top:1px solid rgba(240,209,139,.12);
+    }
   </style>
 </head>
 
 <body>
   <!-- TOPBAR -->
-  <div class="topbar" id="top">
-    <div class="container">
-      <div class="inner">
-        <div class="brand">
-          <img src="assets/logo.png" alt="Vận Tải Trường An" />
-          <div>
-            <div class="title">VẬN TẢI TRƯỜNG AN</div>
-            <div class="sub">Xe ghép • Xe hợp đồng • Tiện chuyến</div>
-          </div>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <!-- Logo doanh nghiệp -->
+        <!-- Nếu bạn có logo: upload assets/logo.png -->
+        <img src="assets/logo.png" alt="Vận Tải Trường An" onerror="this.style.display='none'">
+        <div>
+          <div class="title">VẬN TẢI TRƯỜNG AN</div>
+          <div class="sub">Xe ghép • Xe hợp đồng • Tiện chuyến</div>
         </div>
+      </a>
 
-        <div class="actions">
-          <span class="chip">Hà Nội • Hải Phòng • Hạ Long</span>
-          <a class="btn" href="#bang-gia">Bảng giá</a>
-          <button class="btn" type="button" onclick="openZalo()">💬 Zalo</button>
-          <a class="btn" href="https://zalo.me/0936779938" aria-label="Chat Zalo">
-            <img src="assets/zalo.png" alt="Zalo"style="width:22px;height:22px;border-radius:50%;">
-          </a>
+      <div class="nav">
+        <a class="pill" href="#tuyen">Hà Nội • Hải Phòng • Hạ Long</a>
+        <a class="pill" href="#bang-gia">Bảng giá</a>
 
-        </div>
+        <!-- Zalo ở menu: CHỈ LOGO (không chữ) -->
+        <a class="pill" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+          <img class="icon" src="assets/zalo.png" alt="Zalo">
+        </a>
+
+        <a class="pill gold" href="tel:0936779938" aria-label="Gọi 0936 77 99 38">
+          📞 0936 77 99 38
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="container">
+  <div class="wrap" id="top">
+    <!-- HERO -->
+    <section class="hero" id="tuyen">
       <div class="hero-grid">
         <div class="card hero-card">
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">
-            <span class="chip">Chỉ từ <b>400K</b></span>
-            <span class="chip">Đón trả tận nơi</span>
-            <span class="chip">Xe đời cao - sạch sẽ</span>
+          <div class="badges">
+            <span class="badge">Chỉ từ 400K</span>
+            <span class="badge">Đón trả tận nơi</span>
+            <span class="badge">Xe đời cao • sạch sẽ</span>
           </div>
 
-          <h1>Xe ghép & Xe hợp đồng<br/>Hà Nội – Hải Phòng – Hạ Long</h1>
+          <h1>Xe ghép & Xe hợp đồng<br>Hà Nội – Hải Phòng – Hạ Long</h1>
           <p class="lead">
-            Nhận đặt xe nhanh, giá rõ ràng. Phù hợp đi công tác, du lịch, đưa đón khách, nhận đồ/hàng hỏa tốc.
+            Nhận đặt xe nhanh, giá rõ ràng. Phù hợp đi công tác, du lịch, đưa đón khách,
+            nhận đồ/hàng hóa tốc.
           </p>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="tel:+84936779938">📞 Gọi ngay</a>
-            <button class="btn" type="button" onclick="openZalo()">💬 Zalo</button>
-            <a class="btn" href="#lien-he">📩 Đặt xe</a>
+          <div class="cta-row">
+            <a class="btn primary" href="tel:0936779938">
+              <span class="ico">📞</span> Gọi ngay
+            </a>
+
+            <!-- Zalo ở CTA: CHỈ LOGO -->
+            <a class="btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+              <span class="ico"><img src="assets/zalo.png" alt="Zalo"></span>
+              Chat Zalo
+            </a>
+
+            <a class="btn" href="#lien-he">
+              <span class="ico">📝</span> Đặt xe
+            </a>
           </div>
 
           <div class="highlights">
@@ -340,243 +417,125 @@
             <div class="hl"><b>Hỗ trợ nhanh</b> – gọi là có</div>
           </div>
 
-          <div class="note">
-            * Bạn có thể thay ảnh xe trong thư mục <b>assets/cars</b> để trang trông “thật” hơn.
-          </div>
+          <div class="note">* Ảnh xe nằm trong thư mục <b>assets/cars</b> để trang trông “thật” hơn.</div>
         </div>
 
-        <div class="card banner">
-          <img src="assets/banner.png" alt="Dịch vụ xe hợp đồng - xe ghép Trường An" />
-          <div class="voucher">🎁 Tặng ngay <b>Voucher 50K</b> cho lần đặt xe thứ 2</div>
-          <a class="btn primary" href="#lien-he" style="justify-content:center">Đặt xe ngay</a>
+        <div class="card promo-card" id="lien-he">
+          <div class="promo-title">🟢 Dịch vụ xe hợp đồng - xe ghép Trường An</div>
+          <div class="voucher">🎁 Tặng ngay Voucher <b>50K</b> cho lần đặt xe thứ 2</div>
+
+          <a class="btn primary" href="tel:0936779938" style="width:100%; justify-content:center;">
+            Đặt xe ngay
+          </a>
+
+          <div class="divider"></div>
+
+          <p class="note" style="margin:12px 4px 0">
+            Hotline: <b style="color:var(--gold2)">0936 77 99 38</b><br>
+            Xe đời cao, sạch sẽ • giao hàng hoả tốc
+          </p>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- PRICING -->
-  <section id="bang-gia">
-    <div class="container">
-      <div class="section-title">
-        <h2>Bảng giá tham khảo</h2>
-        <p>Xe ghép / Bao xe 5 chỗ / Bao xe 7 chỗ</p>
-      </div>
+    <!-- PRICING -->
+    <section class="section" id="bang-gia">
+      <div class="section-title">Bảng giá tham khảo</div>
 
       <div class="pricing">
         <div class="card price-card">
           <div class="route">
-            <b>Hà Nội ⇄ Hải Phòng</b>
+            <span>Hà Nội ⇄ Hải Phòng</span>
             <span class="from">Từ 400K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><b>400K</b></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><b>900K</b></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><b>1.000K</b></div>
+            <div class="row"><span>Xe ghép</span><span>400K</span></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><span>900K</span></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><span>1.000K</span></div>
           </div>
         </div>
 
         <div class="card price-card">
           <div class="route">
-            <b>Hà Nội ⇄ Hạ Long</b>
+            <span>Hà Nội ⇄ Hạ Long</span>
             <span class="from">Từ 500K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><b>500K</b></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><b>1.100K</b></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><b>1.300K</b></div>
+            <div class="row"><span>Xe ghép</span><span>500K</span></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><span>1.100K</span></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><span>1.300K</span></div>
           </div>
         </div>
 
         <div class="card price-card">
           <div class="route">
-            <b>Hải Phòng ⇄ Hạ Long</b>
+            <span>Hải Phòng ⇄ Hạ Long</span>
             <span class="from">Từ 250K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><b>250K</b></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><b>500K</b></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><b>600K</b></div>
+            <div class="row"><span>Xe ghép</span><span>250K</span></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><span>500K</span></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><span>600K</span></div>
           </div>
         </div>
       </div>
 
-      <div class="voucher">🎁 Tặng ngay <b>Voucher 50K</b> cho lần đặt xe thứ 2</div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>Vì sao chọn Trường An?</h2>
-        <p>Đi là thích • Trải nghiệm tốt</p>
+      <div class="card" style="margin-top:12px; padding:10px 14px; text-align:center; color:var(--gold2); font-weight:900;">
+        🎁 Tặng ngay Voucher 50K cho lần đặt xe thứ 2
       </div>
+    </section>
 
-      <div class="features">
-        <div class="card feature">
-          <div class="icon">★</div>
-          <h3>Xe đời cao – sạch sẽ</h3>
-          <p>Nội thất gọn gàng, điều hòa mát, ưu tiên an toàn.</p>
-        </div>
-        <div class="card feature">
-          <div class="icon">⏱</div>
-          <h3>Đúng giờ – linh hoạt</h3>
-          <p>Chủ động thời gian đón/trả, tối ưu lịch trình.</p>
-        </div>
-        <div class="card feature">
-          <div class="icon">📍</div>
-          <h3>Đón trả tận nơi</h3>
-          <p>Hỗ trợ đón tại nhà, khách sạn, bến xe…</p>
-        </div>
-        <div class="card feature">
-          <div class="icon">☎</div>
-          <h3>Hỗ trợ nhanh</h3>
-          <p>Gọi là có • Tư vấn tuyến & giá rõ ràng.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>Hình ảnh xe thực tế</h2>
-        <p>Thêm ảnh xe để tăng độ tin cậy</p>
-      </div>
+    <!-- GALLERY -->
+    <section class="section" id="hinh-anh">
+      <div class="section-title">Hình ảnh xe thực tế</div>
 
       <div class="gallery">
-        <div class="card gallery-item">
-          <img src="assets/cars/xe-1.jpg" alt="Xe Trường An 1" />
+        <div class="gallery-item">
+          <img src="assets/cars/xe-1.jpg" alt="Xe Trường An 1">
           <div class="caption">Xe 5 chỗ – đi ghép / bao xe</div>
         </div>
-
-        <div class="card gallery-item">
-          <img src="assets/cars/xe-2.jpg" alt="Xe Trường An 2" />
+        <div class="gallery-item">
+          <img src="assets/cars/xe-2.jpg" alt="Xe Trường An 2">
           <div class="caption">Xe 7 chỗ – gia đình, nhóm nhỏ</div>
         </div>
-
-        <div class="card gallery-item">
-          <img src="assets/cars/xe-3.jpg" alt="Xe Trường An 3" />
-          <div class="caption">Xe SUV – chạy đường dài êm ái</div>
+        <div class="gallery-item">
+          <img src="assets/cars/xe-3.jpg" alt="Xe Trường An 3">
+          <div class="caption">Xe đường dài – êm ái</div>
         </div>
-
-        <div class="card gallery-item">
-          <img src="assets/cars/xe-4.jpg" alt="Nội thất xe Trường An" />
-          <div class="caption">Nội thất sạch sẽ – thoải mái</div>
+        <div class="gallery-item">
+          <img src="assets/cars/xe-4.jpg" alt="Xe Trường An 4">
+          <div class="caption">Sạch sẽ – lịch sự</div>
         </div>
-
-        <div class="card gallery-item">
-          <img src="assets/cars/xe-5.jpg" alt="Xe Trường An 5" />
-          <div class="caption">Xe phục vụ khách công tác / du lịch</div>
+        <div class="gallery-item">
+          <img src="assets/cars/xe-5.jpg" alt="Xe Trường An 5">
+          <div class="caption">Phục vụ công tác / du lịch</div>
         </div>
       </div>
 
-    </div>
-  </section>
+      <p class="note" style="margin-top:10px">
+        Nếu ảnh chưa hiện: kiểm tra đúng đường dẫn <b>assets/cars/xe-1.jpg</b>… và nhấn <b>Ctrl + F5</b>.
+      </p>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="lien-he">
-    <div class="container">
-      <div class="section-title">
-        <h2>Đặt xe nhanh</h2>
-        <p>Bấm gọi / Zalo là đặt được ngay</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="card contact-card">
-          <div class="chip">Hotline</div>
-          <div class="bigphone">0936 77 99 38</div>
-          <p class="smallmuted">Gọi để báo tuyến, số người, thời gian đón – mình hỗ trợ nhanh.</p>
-          <div class="contact-actions">
-            <a class="btn primary" href="tel:+84936779938">📞 Gọi ngay</a>
-          </div>
-        </div>
-
-        <div class="card contact-card">
-          <div class="chip">Gợi ý khi đặt xe</div>
-          <p class="smallmuted" style="margin-top:10px">
-            • Tuyến đi (HN/HP/HL) <br/>
-            • Số người / hành lý <br/>
-            • Thời gian đón <br/>
-            • Đi ghép hay bao xe 5–7 chỗ
-          </p>
-          <div class="contact-actions" style="margin-top:14px">
-            <a class="btn" href="#bang-gia">Xem bảng giá</a>
-            <a class="btn" href="#top">Về đầu trang</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="container">
-      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-        <div>
-          <b style="color:var(--gold2)">Vận Tải Trường An</b> • Xe ghép • Xe hợp đồng • Tiện chuyến
-          <div>Hà Nội • Hải Phòng • Hạ Long</div>
-        </div>
-        <div>© <span id="y"></span> Truong An Transport</div>
-      </div>
+    <div class="footer">
+      © Vận Tải Trường An • Hotline: 0936 77 99 38 • Zalo: 0936 77 99 38
     </div>
   </div>
 
-  <!-- Floating Call + Zalo -->
-  <div class="fab-wrap" aria-label="Liên hệ nhanh">
-    <a class="fab-btn primary" href="tel:+84936779938" aria-label="Gọi ngay"><span>📞</span></a>
+  <!-- FLOATING BUTTONS (KHÔNG BỊ ĐÈ) -->
+  <div class="float-stack">
+    <!-- Nút gọi -->
+    <a class="float-btn call" href="tel:0936779938" aria-label="Gọi ngay">
+      <!-- Phone icon -->
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
+      </svg>
+    </a>
+
+    <!-- Nút Zalo (LOGO) -->
+    <a class="float-btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+      <img src="assets/zalo.png" alt="Zalo">
+    </a>
   </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Mở Zalo app nếu có, fallback sang web zalo.me
-    function openZalo(){
-      const phone = "0936779938";
-      const webUrl = "https://zalo.me/" + phone;
-
-      // Deep link (một số máy sẽ mở app)
-      const deepLink = "zalo://chat?phone=" + phone;
-
-      // Thử mở app
-      window.location.href = deepLink;
-
-      // Nếu không mở được app thì sau 700ms chuyển sang web
-      setTimeout(() => {
-        window.location.href = webUrl;
-      }, 700);
-    }
-  </script>
 </body>
-
-  <!-- ZALO FLOAT BUTTON -->
-<a href="https://zalo.me/0936779938" target="_blank" class="zalo-float">
-  <img src="assets/zalo.png" alt="Chat Zalo">
-</a>
-
-<style>
-.zalo-float{
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  width: 56px;
-  height: 56px;
-  background: #0084ff;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0,0,0,.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-.zalo-float img{
-  width: 32px;
-  height: 32px;
-}
-.zalo-float:hover{
-  transform: scale(1.08);
-}
-</style>
-
 </html>
