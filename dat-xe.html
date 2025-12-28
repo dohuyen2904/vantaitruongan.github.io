@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt xe nhanh | Trường An</title>
+  <meta name="description" content="Form đặt xe nhanh – CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN. Gửi yêu cầu qua Zalo 0936779938." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://dohuyen2904.github.io/vantaitruongan.github.io/dat-xe.html" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#121212;
+      --text:#f4f4f4;
+      --muted:#b9b9b9;
+      --gold:#d6b25e;
+      --gold2:#f0cf7a;
+      --line:rgba(214,178,94,.25);
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 30% -20%, rgba(214,178,94,.20), transparent 60%), var(--bg);
+      color:var(--text);
+    }
+    .wrap{max-width:560px; margin:0 auto; padding:18px 14px 90px}
+    .card{
+      background: rgba(18,18,18,.92);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:12px;
+    }
+    .brand img{
+      width:44px;height:44px;border-radius:50%;
+      border:1px solid rgba(214,178,94,.5);
+      object-fit:cover;background:#000;
+    }
+    h1{margin:0 0 6px; font-size:20px}
+    .sub{margin:0 0 12px; color:var(--muted); font-size:13px}
+
+    label{display:block; margin-top:10px; font-weight:800; font-size:13px; color:var(--gold2)}
+    input, select, textarea{
+      width:100%;
+      margin-top:6px;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(214,178,94,.35);
+      background:#0f0f10;
+      color:#fff;
+      outline:none;
+      font-size:14px;
+    }
+    textarea{resize:none}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width:520px){ .row{grid-template-columns:1fr} }
+
+    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(214,178,94,.35);
+      background: rgba(18,18,18,.85);
+      color:var(--text);
+      font-weight:900;
+      cursor:pointer;
+      flex:1;
+      min-width: 180px;
+    }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(240,207,122,.95), rgba(214,178,94,.95));
+      color:#1a1407;
+      border-color: rgba(240,207,122,.9);
+    }
+    .btn img{width:18px;height:18px;border-radius:50%;background:#fff;object-fit:cover}
+    .note{margin-top:10px; color:var(--muted); font-size:12px}
+
+    /* Floating Zalo logo */
+    .float{
+      position:fixed; right:14px; bottom:14px; z-index:9999;
+      width:56px;height:56px;border-radius:999px;
+      display:grid;place-items:center;
+      border:1px solid rgba(214,178,94,.45);
+      background: rgba(18,18,18,.92);
+      box-shadow: 0 10px 26px rgba(0,0,0,.35);
+    }
+    .float img{width:34px;height:34px;border-radius:50%;background:#fff;object-fit:cover}
+    .back{display:inline-block; margin-top:14px; color:var(--gold2); font-weight:900}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo Trường An" onerror="this.style.display='none'">
+        <div>
+          <h1>Đặt xe nhanh</h1>
+          <p class="sub">CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN • 24/24h</p>
+        </div>
+      </div>
+
+      <form id="datxe">
+        <div class="row">
+          <div>
+            <label>Họ và tên *</label>
+            <input id="ten" required placeholder="VD: Nguyễn Văn A" />
+          </div>
+          <div>
+            <label>Số điện thoại *</label>
+            <input id="sdt" required placeholder="VD: 09xxxxxxxx" />
+          </div>
+        </div>
+
+        <label>Tuyến đường *</label>
+        <input id="tuyen" required placeholder="VD: Hà Nội → Hải Phòng" />
+
+        <div class="row">
+          <div>
+            <label>Ngày/giờ đón *</label>
+            <input id="thoigian" type="datetime-local" required />
+          </div>
+          <div>
+            <label>Loại dịch vụ *</label>
+            <select id="loai" required>
+              <option value="Xe ghép">Xe ghép</option>
+              <option value="Xe hợp đồng 5 chỗ">Xe hợp đồng 5 chỗ</option>
+              <option value="Xe hợp đồng 7 chỗ">Xe hợp đồng 7 chỗ</option>
+              <option value="Vận chuyển hàng hóa">Vận chuyển hàng hóa</option>
+              <option value="Đưa đón sân bay/du lịch">Đưa đón sân bay/du lịch</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Ghi chú thêm</label>
+        <textarea id="ghichu" rows="3" placeholder="VD: 3 người + 2 vali / cần đón tận nơi..."></textarea>
+
+        <div class="btns">
+          <button class="btn primary" type="submit">
+            <img src="assets/zalo.png" alt="Zalo"> Gửi qua Zalo
+          </button>
+          <a class="btn" href="./" style="text-decoration:none">
+            ← Về trang chủ
+          </a>
+        </div>
+
+        <div class="note">
+          Khi bấm “Gửi qua Zalo”, hệ thống sẽ mở Zalo với nội dung đặt xe đã điền sẵn.
+        </div>
+      </form>
+    </div>
+
+    <a class="back" href="./">← Quay lại trang chủ</a>
+  </div>
+
+  <a class="float" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+    <img src="assets/zalo.png" alt="Zalo">
+  </a>
+
+  <script>
+    document.getElementById("datxe").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const ten = document.getElementById("ten").value.trim();
+      const sdt = document.getElementById("sdt").value.trim();
+      const tuyen = document.getElementById("tuyen").value.trim();
+      const thoigian = document.getElementById("thoigian").value;
+      const loai = document.getElementById("loai").value;
+      const ghichu = document.getElementById("ghichu").value.trim();
+
+      const msg =
+        "🚗 *ĐẶT XE – TRƯỜNG AN*\n\n" +
+        "🏢 Công ty: CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN\n" +
+        "👤 Họ tên: " + ten + "\n" +
+        "📞 SĐT: " + sdt + "\n" +
+        "🧾 Dịch vụ: " + loai + "\n" +
+        "📍 Tuyến: " + tuyen + "\n" +
+        "⏰ Thời gian: " + thoigian + "\n" +
+        "📝 Ghi chú: " + (ghichu || "Không") + "\n\n" +
+        "Xin tư vấn & xác nhận giúp tôi.";
+
+      const url = "https://zalo.me/0936779938?text=" + encodeURIComponent(msg);
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
