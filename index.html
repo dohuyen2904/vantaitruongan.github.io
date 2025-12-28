@@ -43,6 +43,31 @@
   }
   </script>
 
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Xe ghép là gì?",
+      "acceptedAnswer":{"@type":"Answer","text":"Xe ghép là hình thức đi chung tuyến để tiết kiệm chi phí. Trường An hỗ trợ đón/trả linh hoạt theo khu vực."}
+    },
+    {
+      "@type":"Question",
+      "name":"Có nhận bao xe 5–7 chỗ không?",
+      "acceptedAnswer":{"@type":"Answer","text":"Có. Trường An cung cấp xe hợp đồng 5 chỗ và 7 chỗ đi riêng theo lịch trình."}
+    },
+    {
+      "@type":"Question",
+      "name":"Có nhận vận chuyển hàng hóa không?",
+      "acceptedAnswer":{"@type":"Answer","text":"Có. Nhận vận chuyển hàng hóa tuyến Hà Nội – Hải Phòng – Hạ Long. Vui lòng nhắn Zalo để được tư vấn."}
+    }
+  ]
+}
+</script>
+
+
   <style>
     :root{
       --bg:#0b0b0b;
@@ -404,6 +429,33 @@
   background:#fff;
   object-fit:cover;
 }
+    /* ==== Booking Pro ==== */
+.booking-pro{padding:18px}
+.booking-pro h3{margin:0 0 6px;font-size:18px}
+.booking-pro .desc{margin:0 0 12px;color:var(--muted);font-size:13px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.label{display:block;margin:10px 0 6px;font-weight:900;font-size:12px;color:var(--gold2)}
+.inp,.sel,.txt{
+  width:100%;padding:12px;border-radius:12px;
+  border:1px solid rgba(214,178,94,.35);
+  background:#0f0f10;color:#fff;outline:none;font-size:14px
+}
+.txt{resize:none}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.form-actions .btn{flex:1;min-width:180px}
+.icon-img{width:18px;height:18px;border-radius:50%;background:#fff;object-fit:cover}
+.helper{margin-top:10px;color:var(--muted);font-size:12px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.pill{
+  border:1px solid rgba(214,178,94,.25);
+  background:rgba(214,178,94,.10);
+  color:var(--gold2);
+  padding:6px 10px;border-radius:999px;
+  font-size:12px;font-weight:900;cursor:pointer;
+}
+.pill:hover{border-color:rgba(240,207,122,.75)}
+
   </style>
 </head>
 
@@ -503,58 +555,106 @@
 
     <div class="card booking">
       <!-- Form -->
-      <div class="box">
-        <h3>📝 Gửi yêu cầu đặt xe</h3>
-        <p class="desc">Phục vụ 24/24h • Tuyến chính: Hà Nội – Hải Phòng – Hạ Long</p>
+  <section id="dat-xe">
+  <div class="container">
+    <div class="section-title">
+      <h2>Đặt xe nhanh</h2>
+      <p>Điền thông tin – bấm gửi – Zalo mở ra với nội dung đặt xe</p>
+    </div>
 
-        <form id="bookingForm">
-          <div class="form-grid">
-            <div>
-              <span class="label">Họ và tên *</span>
-              <input class="inp" id="bk_name" required placeholder="VD: Nguyễn Văn A" />
-            </div>
-            <div>
-              <span class="label">Số điện thoại *</span>
-              <input class="inp" id="bk_phone" required placeholder="VD: 09xxxxxxxx" />
-            </div>
-          </div>
+    <div class="card booking-pro">
+      <h3>📝 Gửi yêu cầu đặt xe</h3>
+      <p class="desc">Phục vụ 24/24h • Tuyến chính: Hà Nội – Hải Phòng – Hạ Long</p>
 
-          <div class="form-grid">
-            <div>
-              <span class="label">Tuyến đường *</span>
-              <input class="inp" id="bk_route" required placeholder="VD: Hà Nội → Hải Phòng" />
-            </div>
-            <div>
-              <span class="label">Loại dịch vụ *</span>
-              <select class="sel" id="bk_service" required>
-                <option value="Xe ghép">Xe ghép</option>
-                <option value="Xe hợp đồng 5 chỗ">Xe hợp đồng 5 chỗ</option>
-                <option value="Xe hợp đồng 7 chỗ">Xe hợp đồng 7 chỗ</option>
-                <option value="Vận chuyển hàng hóa">Vận chuyển hàng hóa</option>
-                <option value="Đưa đón sân bay/du lịch">Đưa đón sân bay/du lịch</option>
-              </select>
-            </div>
-          </div>
-
-          <span class="label">Ngày/giờ đón *</span>
-          <input class="inp" id="bk_time" type="datetime-local" required />
-
-          <span class="label">Ghi chú thêm</span>
-          <textarea class="txt" id="bk_note" rows="3" placeholder="VD: 3 người + 2 vali / cần đón tận nơi..."></textarea>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary">
-              <img src="assets/zalo.png" class="zico" alt="Zalo"> Gửi qua Zalo
-            </button>
-
-            <a class="btn" href="dat-xe.html">Mở trang đặt xe riêng</a>
-          </div>
-
-          <div class="small-note">
-            * Sau khi bấm “Gửi qua Zalo”, hệ thống sẽ mở Zalo với nội dung đã điền sẵn.
-          </div>
-        </form>
+      <div class="pills" aria-label="Chọn nhanh tuyến">
+        <div class="pill" data-route="Hà Nội → Hải Phòng">HN → HP</div>
+        <div class="pill" data-route="Hà Nội → Hạ Long">HN → HL</div>
+        <div class="pill" data-route="Hải Phòng → Hạ Long">HP → HL</div>
+        <div class="pill" data-route="Hải Phòng → Hà Nội">HP → HN</div>
       </div>
+
+      <form id="bookingForm">
+        <div class="form-grid">
+          <div>
+            <span class="label">Họ và tên *</span>
+            <input class="inp" id="bk_name" required placeholder="VD: Nguyễn Văn A" />
+          </div>
+          <div>
+            <span class="label">Số điện thoại *</span>
+            <input class="inp" id="bk_phone" required placeholder="VD: 09xxxxxxxx" />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <span class="label">Điểm đón *</span>
+            <input class="inp" id="bk_pickup" required placeholder="VD: Cầu Giấy / Bến xe / Số nhà..." />
+          </div>
+          <div>
+            <span class="label">Điểm trả *</span>
+            <input class="inp" id="bk_dropoff" required placeholder="VD: Lê Chân / Sân bay / Khách sạn..." />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <span class="label">Tuyến đường *</span>
+            <input class="inp" id="bk_route" required placeholder="VD: Hà Nội → Hải Phòng" />
+          </div>
+          <div>
+            <span class="label">Loại dịch vụ *</span>
+            <select class="sel" id="bk_service" required>
+              <option value="Xe ghép">Xe ghép</option>
+              <option value="Xe hợp đồng 5 chỗ">Xe hợp đồng 5 chỗ</option>
+              <option value="Xe hợp đồng 7 chỗ">Xe hợp đồng 7 chỗ</option>
+              <option value="Vận chuyển hàng hóa">Vận chuyển hàng hóa</option>
+              <option value="Đưa đón sân bay/du lịch">Đưa đón sân bay/du lịch</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <span class="label">Ngày/giờ đón *</span>
+            <input class="inp" id="bk_time" type="datetime-local" required />
+          </div>
+          <div>
+            <span class="label">Số người / Hàng *</span>
+            <select class="sel" id="bk_qty" required>
+              <option value="1–2 người">1–2 người</option>
+              <option value="3–4 người">3–4 người</option>
+              <option value="5–7 người">5–7 người</option>
+              <option value="Hàng hóa nhẹ">Hàng hóa nhẹ</option>
+              <option value="Hàng hóa cồng kềnh">Hàng hóa cồng kềnh</option>
+            </select>
+          </div>
+        </div>
+
+        <span class="label">Ghi chú thêm</span>
+        <textarea class="txt" id="bk_note" rows="3" placeholder="VD: 2 vali / đón tận nơi / giờ linh hoạt..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary" aria-label="Gửi qua Zalo">
+            <img src="assets/zalo.png" class="icon-img" alt="Zalo"> Gửi qua Zalo
+          </button>
+
+          <a class="btn" href="dat-xe.html" aria-label="Trang đặt xe riêng">
+            Mở trang đặt xe riêng
+          </a>
+
+          <a class="btn" href="https://www.facebook.com/profile.php?id=100090970607786" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook.png" class="icon-img" alt="Facebook"> Facebook
+          </a>
+        </div>
+
+        <div class="helper">
+          * Bấm gửi để mở Zalo với nội dung đặt xe. Nhân viên Trường An sẽ xác nhận nhanh.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
       <!-- Thông tin nhanh (đẹp + tăng tin tưởng) -->
       <div class="box" style="border-left:1px solid rgba(255,255,255,.06)">
@@ -804,33 +904,80 @@
     </a>
   </div>
 
+  <section id="faq">
+  <div class="container">
+    <div class="section-title">
+      <h2>Câu hỏi thường gặp</h2>
+      <p>Giúp khách hiểu nhanh – tăng tin tưởng – tốt cho SEO</p>
+    </div>
+
+    <div class="card" style="padding:18px">
+      <h3 style="margin:0 0 8px">1) Xe ghép là gì?</h3>
+      <p style="margin:0 0 14px;color:var(--muted)">
+        Xe ghép là hình thức đi chung tuyến để tiết kiệm chi phí. Trường An hỗ trợ đón/trả linh hoạt theo khu vực.
+      </p>
+
+      <h3 style="margin:0 0 8px">2) Có nhận bao xe 5–7 chỗ không?</h3>
+      <p style="margin:0 0 14px;color:var(--muted)">
+        Có. Bạn có thể chọn xe hợp đồng 5 chỗ hoặc 7 chỗ để đi riêng theo lịch trình.
+      </p>
+
+      <h3 style="margin:0 0 8px">3) Có nhận vận chuyển hàng hóa không?</h3>
+      <p style="margin:0;color:var(--muted)">
+        Có. Nhận hàng hóa tuyến Hà Nội – Hải Phòng – Hạ Long (hàng nhẹ/khẩn). Vui lòng nhắn Zalo để báo giá.
+      </p>
+    </div>
+  </div>
+</section>
+
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
   <script>
-  document.getElementById("bookingForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    const name = document.getElementById("bk_name").value.trim();
-    const phone = document.getElementById("bk_phone").value.trim();
-    const route = document.getElementById("bk_route").value.trim();
-    const service = document.getElementById("bk_service").value;
-    const time = document.getElementById("bk_time").value;
-    const note = document.getElementById("bk_note").value.trim();
-
-    const msg =
-      "🚗 *ĐẶT XE – TRƯỜNG AN*\n\n" +
-      "🏢 Công ty: CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN\n" +
-      "👤 Họ tên: " + name + "\n" +
-      "📞 SĐT: " + phone + "\n" +
-      "🧾 Dịch vụ: " + service + "\n" +
-      "📍 Tuyến: " + route + "\n" +
-      "⏰ Thời gian: " + time + "\n" +
-      "📝 Ghi chú: " + (note || "Không") + "\n\n" +
-      "Xin tư vấn & xác nhận giúp tôi.";
-
-    window.open("https://zalo.me/0936779938?text=" + encodeURIComponent(msg), "_blank");
+  // chọn nhanh tuyến
+  document.querySelectorAll('.pill[data-route]').forEach(p => {
+    p.addEventListener('click', () => {
+      const v = p.getAttribute('data-route');
+      const route = document.getElementById('bk_route');
+      if (route) route.value = v;
+      route?.focus();
+    });
   });
+
+  // gửi form qua Zalo
+  const form = document.getElementById("bookingForm");
+  if (form) {
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("bk_name").value.trim();
+      const phone = document.getElementById("bk_phone").value.trim();
+      const pickup = document.getElementById("bk_pickup").value.trim();
+      const dropoff = document.getElementById("bk_dropoff").value.trim();
+      const route = document.getElementById("bk_route").value.trim();
+      const service = document.getElementById("bk_service").value;
+      const time = document.getElementById("bk_time").value;
+      const qty = document.getElementById("bk_qty").value;
+      const note = document.getElementById("bk_note").value.trim();
+
+      const msg =
+        "🚗 *ĐẶT XE – TRƯỜNG AN*\n\n" +
+        "🏢 Công ty: CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN\n" +
+        "👤 Họ tên: " + name + "\n" +
+        "📞 SĐT: " + phone + "\n" +
+        "🧾 Dịch vụ: " + service + "\n" +
+        "👥 Số người/Hàng: " + qty + "\n" +
+        "📍 Tuyến: " + route + "\n" +
+        "🚩 Điểm đón: " + pickup + "\n" +
+        "🏁 Điểm trả: " + dropoff + "\n" +
+        "⏰ Thời gian: " + time + "\n" +
+        "📝 Ghi chú: " + (note || "Không") + "\n\n" +
+        "Xin tư vấn & xác nhận giúp tôi.";
+
+      window.open("https://zalo.me/0936779938?text=" + encodeURIComponent(msg), "_blank");
+    });
+  }
 </script>
 </body>
 </html>
