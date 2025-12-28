@@ -3,586 +3,819 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vận Tải Trường An | Xe ghép • Xe hợp đồng</title>
-  <meta name="description" content="Xe ghép & xe hợp đồng Hà Nội – Hải Phòng – Hạ Long. Gọi là có, đi là thích!" />
+
+  <title>Công ty TNHH Vận tải hành khách và hàng hóa Trường An | Xe ghép Hà Nội – Hải Phòng – Hạ Long</title>
+  <meta name="description" content="CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN (MST: 0202243189) – Xe ghép, xe hợp đồng 5–7 chỗ, vận chuyển hàng hóa tuyến Hà Nội – Hải Phòng – Hạ Long. Hotline/Zalo 0936779938. Phục vụ 24/24h." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://dohuyen2904.github.io/vantaitruongan.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Công ty TNHH Vận tải Trường An | Xe ghép Hà Nội – Hải Phòng – Hạ Long" />
+  <meta property="og:description" content="Xe ghép • Xe hợp đồng 5–7 chỗ • Vận chuyển hàng hóa. Hotline/Zalo: 0936779938. Phục vụ 24/24h." />
+  <meta property="og:url" content="https://dohuyen2904.github.io/vantaitruongan.github.io/" />
+  <meta property="og:image" content="assets/banner.png" />
+
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <!-- LocalBusiness Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TransportationCompany",
+    "name": "CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN",
+    "taxID": "0202243189",
+    "email": "xeghephanoihaiphong86@gmail.com",
+    "telephone": "+84936779938",
+    "url": "https://dohuyen2904.github.io/vantaitruongan.github.io/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tiểu Trà 1, Phường Hưng Đạo",
+      "addressLocality": "Thành phố Hải Phòng",
+      "addressRegion": "Hải Phòng",
+      "addressCountry": "VN"
+    },
+    "areaServed": ["Hà Nội", "Hải Phòng", "Hạ Long"],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100090970607786"
+    ]
+  }
+  </script>
 
   <style>
     :root{
-      --bg:#070707;
-      --panel:#0f0f10;
-      --panel2:#111113;
-      --line:rgba(212,172,80,.22);
-      --muted:#b7b7b7;
-      --text:#f3f3f3;
-      --gold:#d8b35d;
-      --gold2:#f0d18b;
-      --shadow: 0 14px 40px rgba(0,0,0,.55);
-      --radius:18px;
+      --bg:#0b0b0b;
+      --card:#121212;
+      --text:#f4f4f4;
+      --muted:#b9b9b9;
+      --gold:#d6b25e;
+      --gold2:#f0cf7a;
+      --line:#242424;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 30% 0%, rgba(216,179,93,.12), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(216,179,93,.08), transparent 55%),
-                  var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:
+        radial-gradient(1200px 600px at 30% -20%, rgba(214,178,94,.25), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(240,207,122,.18), transparent 55%),
+        var(--bg);
       color:var(--text);
+      line-height:1.6;
     }
     a{color:inherit; text-decoration:none}
-    .wrap{max-width:1100px; margin:0 auto; padding:18px 14px 90px}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
 
-    /* Top bar */
+    /* Topbar */
     .topbar{
-      position: sticky;
-      top:0;
-      z-index: 50;
+      position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(7,7,7,.92), rgba(7,7,7,.65));
-      border-bottom:1px solid rgba(212,172,80,.12);
+      background: rgba(11,11,11,.72);
+      border-bottom: 1px solid rgba(214,178,94,.18);
     }
-    .topbar-inner{
-      max-width:1100px;
-      margin:0 auto;
-      padding:12px 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0; gap:12px; flex-wrap:wrap;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width: 220px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; min-width: 260px;}
     .brand img{
-      width:42px; height:42px;
-      border-radius:50%;
-      object-fit:cover;
-      border:1px solid rgba(240,209,139,.45);
-      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      width:44px; height:44px; border-radius:50%;
+      border:1px solid rgba(214,178,94,.5);
       background:#000;
+      object-fit:cover;
+      box-shadow: var(--shadow);
     }
-    .brand .title{
-      font-weight:800;
-      letter-spacing:.4px;
-      font-size:15px;
-      line-height:1.15;
-    }
-    .brand .sub{
-      color:var(--muted);
-      font-size:12px;
-      margin-top:2px;
-    }
+    .brand .title{font-weight:900; letter-spacing:.2px; font-size:13px; line-height:1.2}
+    .brand .sub{color:var(--muted); font-size:12px; margin-top:2px}
 
-    .nav{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid rgba(240,209,139,.28);
-      background: rgba(18,18,19,.6);
-      box-shadow: 0 10px 26px rgba(0,0,0,.25);
-      font-weight:700;
-      font-size:13px;
+    .actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(214,178,94,.35);
+      background: rgba(18,18,18,.85);
+      color:var(--text);
+      font-weight:800;
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+      transition: transform .12s ease, border-color .12s ease, opacity .12s ease;
       white-space:nowrap;
     }
-    .pill:hover{border-color: rgba(240,209,139,.48)}
-    .pill.gold{
-      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
-      color:#15110a;
-      border-color: rgba(240,209,139,.75);
+    .btn:hover{transform: translateY(-1px); border-color: rgba(240,207,122,.75)}
+    .btn:active{transform: translateY(0); opacity:.95}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(240,207,122,.95), rgba(214,178,94,.95));
+      color:#1a1407;
+      border-color: rgba(240,207,122,.9);
     }
-    .pill img.icon{
-      width:18px; height:18px;
-      border-radius:50%;
-      object-fit:cover;
-      background:#fff;
+    .chip{
+      font-size:12px; font-weight:900;
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(214,178,94,.16);
+      border:1px solid rgba(214,178,94,.28);
+      color: var(--gold2);
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .chip img{
+      width:18px; height:18px; border-radius:50%;
+      background:#fff; object-fit:cover;
     }
 
-    /* Sections */
-    .hero{padding:22px 0 12px}
+    /* Cards/sections */
+    .card{
+      background: rgba(18,18,18,.92);
+      border: 1px solid rgba(214,178,94,.22);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    section{padding:22px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin: 8px 0 14px;
+      flex-wrap:wrap;
+    }
+    .section-title h2{margin:0; font-size:22px; letter-spacing:.2px}
+    .section-title p{margin:0; color: var(--muted); font-size:14px}
+
+    /* Hero */
+    .hero{padding:30px 0 10px}
     .hero-grid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
       gap:16px;
       align-items:stretch;
     }
-    @media (max-width: 920px){
-      .hero-grid{grid-template-columns:1fr}
-    }
+    @media (max-width: 920px){ .hero-grid{grid-template-columns:1fr} }
 
-    .card{
-      background: linear-gradient(180deg, rgba(18,18,19,.85), rgba(11,11,12,.85));
-      border:1px solid rgba(212,172,80,.18);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
     .hero-card{padding:20px}
     h1{
-      margin:8px 0 10px;
-      font-size:34px;
-      line-height:1.15;
-      letter-spacing:-.2px;
+      margin:0 0 8px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: .2px;
     }
-    .lead{margin:0 0 14px; color:var(--muted); font-size:15px; line-height:1.5}
-    .badges{
-      display:flex; flex-wrap:wrap; gap:8px;
-      margin-bottom:10px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(240,209,139,.25);
-      background: rgba(255,255,255,.03);
-      color: var(--gold2);
-      font-weight:800;
-      font-size:12px;
-    }
-
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(240,209,139,.28);
-      background: rgba(255,255,255,.03);
-      font-weight:800;
-      font-size:14px;
-    }
-    .btn:hover{border-color: rgba(240,209,139,.48)}
-    .btn.primary{
-      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
-      color:#15110a;
-      border-color: rgba(240,209,139,.75);
-    }
-    .btn .ico{
-      width:18px; height:18px;
-      display:inline-flex; align-items:center; justify-content:center;
-    }
-    .btn .ico img{
-      width:18px; height:18px; border-radius:50%; object-fit:cover; background:#fff;
-    }
-
+    .lead{color: var(--muted); margin:0 0 14px; font-size: 16px}
+    .hero-cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
     .highlights{
       display:grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
       gap:10px;
       margin-top:14px;
     }
-    @media (max-width: 520px){
-      .highlights{grid-template-columns:1fr}
-    }
+    @media (max-width:520px){ .highlights{grid-template-columns:1fr} }
     .hl{
       padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.07);
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.06);
       background: rgba(255,255,255,.02);
-      color:#e9e9e9;
       font-weight:700;
-      font-size:13px;
     }
-    .hl b{color:var(--gold2)}
+    .hl b{color: var(--gold2)}
+    .note{font-size:12px; color: var(--muted); margin-top:10px}
 
-    /* Banner / promo */
-    .promo-card{padding:14px}
-    .promo-title{
-      display:flex; align-items:center; gap:10px;
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid rgba(240,209,139,.20);
-      background: rgba(255,255,255,.02);
-      font-weight:800;
-      margin-bottom:10px;
-      font-size:13px;
+    .banner{padding:14px; display:flex; flex-direction:column; gap:12px}
+    .banner img{
+      width:100%;
+      border-radius: 14px;
+      border:1px solid rgba(214,178,94,.2);
+      background:#0d0d0d;
+      object-fit:cover;
+      display:block;
     }
     .voucher{
-      padding:10px 12px;
-      border-radius:12px;
-      background: rgba(216,179,93,.10);
-      border:1px solid rgba(240,209,139,.24);
-      font-weight:800;
-      margin: 10px 0 12px;
-      color: var(--gold2);
-      font-size:13px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(214,178,94,.32);
+      background: rgba(214,178,94,.12);
+      color: #ffefc7;
+      font-weight:900;
+      text-align:center;
     }
-    .note{color:var(--muted); font-size:12px; margin-top:10px}
+
+    /* Services */
+    .services{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:12px;
+    }
+    @media (max-width: 980px){ .services{grid-template-columns: repeat(2, minmax(0,1fr));} }
+    @media (max-width: 520px){ .services{grid-template-columns: 1fr;} }
+    .service{padding:14px}
+    .service .icon{
+      width:38px; height:38px; border-radius:12px;
+      display:grid; place-items:center;
+      background: rgba(214,178,94,.15);
+      border:1px solid rgba(214,178,94,.28);
+      margin-bottom:10px;
+      color: var(--gold2);
+      font-weight: 900;
+    }
+    .service h3{margin:0 0 6px; font-size:15px}
+    .service p{margin:0; color: var(--muted); font-size:13px}
 
     /* Pricing */
-    .section{margin-top:18px}
-    .section-title{
-      font-weight:900;
-      font-size:22px;
-      margin: 22px 0 10px;
-      letter-spacing:-.2px;
-    }
     .pricing{
       display:grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:12px;
+      gap:14px;
     }
-    @media (max-width: 980px){
-      .pricing{grid-template-columns:1fr}
-    }
-    .price-card{padding:14px}
-    .route{
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      font-weight:900; font-size:14px;
-      margin-bottom:10px;
-    }
-    .from{color:var(--gold2)}
-    .rows{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      margin-top:8px;
-    }
+    @media (max-width: 980px){ .pricing{grid-template-columns:1fr} }
+    .price-card{padding:16px}
+    .route{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:10px}
+    .route b{font-size:16px}
+    .route .from{color:var(--gold2); font-weight:900}
+    .rows{border-top:1px solid rgba(255,255,255,.06); padding-top:10px}
     .row{
-      display:flex; justify-content:space-between; gap:10px;
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px dashed rgba(240,209,139,.18);
-      background: rgba(255,255,255,.02);
-      font-weight:800;
-      font-size:13px;
+      display:flex; justify-content:space-between; gap:12px;
+      padding:8px 0;
+      border-bottom:1px dashed rgba(255,255,255,.06);
+      font-weight:700;
     }
-    .row span:last-child{color:var(--gold2)}
+    .row span{color:var(--muted)}
+    .row b{color:var(--gold2)}
 
     /* Gallery */
     .gallery{
       display:grid;
       grid-template-columns: repeat(5, minmax(0,1fr));
-      gap:10px;
+      gap:12px;
     }
-    @media (max-width: 1020px){
-      .gallery{grid-template-columns: repeat(3, minmax(0,1fr))}
-    }
-    @media (max-width: 640px){
-      .gallery{grid-template-columns: repeat(2, minmax(0,1fr))}
-    }
-    .gallery-item{
-      overflow:hidden;
-      border-radius:16px;
-      border:1px solid rgba(240,209,139,.18);
-      background: rgba(255,255,255,.02);
-    }
+    @media (max-width: 980px){ .gallery{grid-template-columns: repeat(3, 1fr);} }
+    @media (max-width: 520px){ .gallery{grid-template-columns: 1fr;} }
+    .gallery-item{overflow:hidden}
     .gallery-item img{
-      width:100%; height:140px;
+      width:100%;
+      height:170px;
       object-fit:cover;
       display:block;
-      filter: contrast(1.02);
+      transition: transform .3s ease;
+      background:#0d0d0d;
     }
+    .gallery-item:hover img{transform: scale(1.05)}
     .caption{
-      padding:10px 10px;
+      padding:10px 12px;
+      font-size:13px;
       color: var(--muted);
-      font-size:12px;
+      background: rgba(0,0,0,.45);
+      border-top:1px solid rgba(255,255,255,.06);
       font-weight:700;
-      border-top:1px solid rgba(240,209,139,.10);
     }
+
+    /* Contact card */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 920px){ .contact-grid{grid-template-columns:1fr} }
+    .contact-card{padding:18px}
+    .bigphone{
+      font-size:26px;
+      font-weight: 900;
+      letter-spacing: .5px;
+      color: var(--gold2);
+      margin: 6px 0 10px;
+    }
+    .smallmuted{color: var(--muted); margin:0}
+    .contact-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
 
     /* Footer */
     .footer{
-      margin-top:18px;
-      padding:12px 14px;
-      text-align:center;
-      color:var(--muted);
-      font-size:12px;
-      border-top:1px solid rgba(240,209,139,.12);
+      padding:22px 0 44px;
+      border-top: 1px solid rgba(214,178,94,.14);
+      color: var(--muted);
+      font-size: 13px;
     }
+    .footer b{color: var(--gold2)}
+    .footer .cols{
+      display:grid; grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      margin-top:10px;
+    }
+    @media (max-width:920px){ .footer .cols{grid-template-columns:1fr} }
+    .list{margin:10px 0 0; padding-left:18px}
+    .list li{margin:4px 0}
 
     /* Floating buttons */
     .float-stack{
       position: fixed;
-      right: 16px;
-      bottom: 16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+      right: 14px;
+      bottom: 14px;
       z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .float-btn{
-      width:56px; height:56px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:1px solid rgba(240,209,139,.28);
-      box-shadow: 0 10px 24px rgba(0,0,0,.40);
-      background: rgba(18,18,19,.78);
-      backdrop-filter: blur(8px);
-      transform: translateZ(0);
+      width: 56px; height: 56px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(214,178,94,.45);
+      background: rgba(18,18,18,.92);
+      box-shadow: 0 10px 26px rgba(0,0,0,.35);
+      cursor: pointer;
+      user-select: none;
+      transition: transform .12s ease, opacity .12s ease, border-color .12s ease;
     }
-    .float-btn:hover{transform: scale(1.06)}
+    .float-btn:hover{transform: translateY(-1px); border-color: rgba(240,207,122,.75)}
+    .float-btn:active{transform: translateY(0); opacity:.95}
     .float-btn.call{
-      background: linear-gradient(180deg, rgba(240,209,139,.92), rgba(216,179,93,.88));
-      border-color: rgba(240,209,139,.75);
+      background: linear-gradient(180deg, rgba(240,207,122,.95), rgba(214,178,94,.95));
+      color: #1a1407;
+      border-color: rgba(240,207,122,.9);
+      font-weight: 900;
     }
-    .float-btn.call svg{fill:#15110a}
     .float-btn img{
-      width:34px; height:34px;
-      border-radius:50%;
-      object-fit:cover;
+      width: 34px; height: 34px;
+      border-radius: 50%;
       background:#fff;
+      object-fit:cover;
     }
 
-    /* Small helper */
-    .divider{
-      margin-top:12px;
-      border-top:1px solid rgba(240,209,139,.12);
+    .mini{
+      font-size:12px; color:var(--muted);
+      margin-top:8px;
     }
+    /* ===== Booking form (Trang chủ) ===== */
+.booking{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:14px;
+  align-items:stretch;
+}
+@media (max-width: 920px){
+  .booking{grid-template-columns:1fr}
+}
+.booking .box{padding:18px}
+.booking h3{margin:0 0 6px; font-size:18px}
+.booking .desc{margin:0 0 12px; color:var(--muted); font-size:13px}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+}
+@media (max-width: 520px){
+  .form-grid{grid-template-columns:1fr}
+}
+.label{
+  display:block;
+  margin:10px 0 6px;
+  font-weight:900;
+  font-size:12px;
+  color: var(--gold2);
+}
+.inp, .sel, .txt{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(214,178,94,.35);
+  background:#0f0f10;
+  color:#fff;
+  outline:none;
+  font-size:14px;
+}
+.txt{resize:none}
+.form-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.form-actions .btn{flex:1; min-width:180px}
+.zico{
+  width:18px; height:18px; border-radius:50%;
+  background:#fff; object-fit:cover;
+}
+.small-note{margin-top:10px; color:var(--muted); font-size:12px}
   </style>
 </head>
 
 <body>
   <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">
-        <!-- Logo doanh nghiệp -->
-        <!-- Nếu bạn có logo: upload assets/logo.png -->
-        <img src="assets/logo.png" alt="Vận Tải Trường An" onerror="this.style.display='none'">
-        <div>
-          <div class="title">VẬN TẢI TRƯỜNG AN</div>
-          <div class="sub">Xe ghép • Xe hợp đồng • Tiện chuyến</div>
+  <div class="topbar" id="top">
+    <div class="container">
+      <div class="inner">
+        <a class="brand" href="#top" aria-label="Trang chủ">
+          <img src="assets/logo.png" alt="Logo Trường An" onerror="this.style.display='none'">
+          <div>
+            <div class="title">CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN</div>
+            <div class="sub">Xe ghép • Xe hợp đồng 5–7 chỗ • Vận chuyển hàng hóa • 24/24h</div>
+          </div>
+        </a>
+
+        <div class="actions">
+          <span class="chip">Hà Nội • Hải Phòng • Hạ Long</span>
+
+          <a class="btn" href="#gioi-thieu">Giới thiệu</a>
+          <a class="btn" href="#dich-vu">Dịch vụ</a>
+          <a class="btn" href="#bang-gia">Bảng giá</a>
+
+          <!-- Zalo = logo (không chữ) -->
+          <a class="chip" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+            <img src="assets/zalo.png" alt="Zalo">
+            Chat
+          </a>
+
+          <a class="btn primary" href="tel:+84936779938">📞 0936 777 998</a>
         </div>
-      </a>
-
-      <div class="nav">
-        <a class="pill" href="#tuyen">Hà Nội • Hải Phòng • Hạ Long</a>
-        <a class="pill" href="#bang-gia">Bảng giá</a>
-
-        <!-- Zalo ở menu: CHỈ LOGO (không chữ) -->
-        <a class="pill" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
-          <img class="icon" src="assets/zalo.png" alt="Zalo">
-        </a>
-
-        <a class="pill gold" href="tel:0936779938" aria-label="Gọi 0936 77 99 38">
-          📞 0936 77 99 38
-        </a>
       </div>
     </div>
   </div>
 
-  <div class="wrap" id="top">
-    <!-- HERO -->
-    <section class="hero" id="tuyen">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
       <div class="hero-grid">
         <div class="card hero-card">
-          <div class="badges">
-            <span class="badge">Chỉ từ 400K</span>
-            <span class="badge">Đón trả tận nơi</span>
-            <span class="badge">Xe đời cao • sạch sẽ</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="chip">Phục vụ <b>24/24h</b></span>
+            <span class="chip">Đón trả tận nơi</span>
+            <span class="chip">Xe sạch sẽ – an toàn</span>
           </div>
 
-          <h1>Xe ghép & Xe hợp đồng<br>Hà Nội – Hải Phòng – Hạ Long</h1>
+          <h1>Dịch vụ vận tải hành khách & hàng hóa<br/>Hà Nội – Hải Phòng – Hạ Long</h1>
           <p class="lead">
-            Nhận đặt xe nhanh, giá rõ ràng. Phù hợp đi công tác, du lịch, đưa đón khách,
-            nhận đồ/hàng hóa tốc.
+            Xe ghép, xe hợp đồng 5–7 chỗ, đưa đón công tác/du lịch và vận chuyển hàng hóa liên tỉnh.
+            Cam kết <b>an toàn – đúng giờ – giá minh bạch</b>.
           </p>
 
-          <div class="cta-row">
-            <a class="btn primary" href="tel:0936779938">
-              <span class="ico">📞</span> Gọi ngay
-            </a>
-
-            <!-- Zalo ở CTA: CHỈ LOGO -->
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:+84936779938">📞 Gọi ngay</a>
+            <a class="btn" href="dat-xe.html">📝 Đặt xe nhanh</a>
             <a class="btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
-              <span class="ico"><img src="assets/zalo.png" alt="Zalo"></span>
-              Chat Zalo
+              <span class="ico"><img src="assets/zalo.png" alt="Zalo" style="width:18px;height:18px;border-radius:50%;background:#fff;"></span>
+              Zalo
             </a>
-
-            <a class="btn" href="#lien-he">
-              <span class="ico">📝</span> Đặt xe
+            <a class="btn" href="https://www.facebook.com/profile.php?id=100090970607786" target="_blank" aria-label="Facebook">
+              🌐 Facebook
             </a>
           </div>
 
           <div class="highlights">
-            <div class="hl"><b>Tiện chuyến</b> – linh hoạt giờ đón</div>
-            <div class="hl"><b>Xe 5–7 chỗ</b> – phù hợp nhóm & gia đình</div>
-            <div class="hl"><b>Giá minh bạch</b> – theo tuyến</div>
+            <div class="hl"><b>Xe ghép</b> – tiết kiệm chi phí</div>
+            <div class="hl"><b>Xe hợp đồng</b> – riêng tư, chủ động</div>
+            <div class="hl"><b>Hàng hóa</b> – nhanh, an toàn</div>
             <div class="hl"><b>Hỗ trợ nhanh</b> – gọi là có</div>
           </div>
 
-          <div class="note">* Ảnh xe nằm trong thư mục <b>assets/cars</b> để trang trông “thật” hơn.</div>
+          <div class="note">
+            Địa chỉ: Tiểu Trà 1, Phường Hưng Đạo, Thành phố Hải Phòng • MST: 0202243189
+          </div>
         </div>
 
-        <div class="card promo-card" id="lien-he">
-          <div class="promo-title">🟢 Dịch vụ xe hợp đồng - xe ghép Trường An</div>
-          <div class="voucher">🎁 Tặng ngay Voucher <b>50K</b> cho lần đặt xe thứ 2</div>
-
-          <a class="btn primary" href="tel:0936779938" style="width:100%; justify-content:center;">
-            Đặt xe ngay
-            <!-- FORM ĐẶT XE -->
-<form id="dat-xe-form" style="margin-top:14px;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-    <input id="ten" placeholder="Họ và tên" required
-      style="padding:10px;border-radius:12px;border:1px solid rgba(240,209,139,.3);background:#0f0f10;color:#fff;">
-    <input id="sdt" placeholder="Số điện thoại" required
-      style="padding:10px;border-radius:12px;border:1px solid rgba(240,209,139,.3);background:#0f0f10;color:#fff;">
-  </div>
-
-  <input id="tuyen" placeholder="Tuyến đường (VD: Hà Nội → Hải Phòng)" required
-    style="margin-top:10px;width:100%;padding:10px;border-radius:12px;border:1px solid rgba(240,209,139,.3);background:#0f0f10;color:#fff;">
-
-  <input id="thoigian" type="datetime-local" required
-    style="margin-top:10px;width:100%;padding:10px;border-radius:12px;border:1px solid rgba(240,209,139,.3);background:#0f0f10;color:#fff;">
-
-  <textarea id="ghichu" rows="3" placeholder="Ghi chú thêm (số khách, hành lý...)"
-    style="margin-top:10px;width:100%;padding:10px;border-radius:12px;border:1px solid rgba(240,209,139,.3);background:#0f0f10;color:#fff;"></textarea>
-
-  <button type="submit"
-    style="margin-top:12px;width:100%;padding:12px;border-radius:999px;border:none;
-    background:linear-gradient(180deg,#f0d18b,#d8b35d);font-weight:900;font-size:15px;">
-    🚗 GỬI ĐẶT XE QUA ZALO
-  </button>
-</form>
-
-          </a>
-
-          <div class="divider"></div>
-
-          <p class="note" style="margin:12px 4px 0">
-            Hotline: <b style="color:var(--gold2)">0936 77 99 38</b><br>
-            Xe đời cao, sạch sẽ • giao hàng hoả tốc
-          </p>
+        <div class="card banner">
+          <img src="assets/banner.png" alt="Vận tải Trường An - Xe ghép xe hợp đồng" onerror="this.style.display='none'"/>
+          <div class="voucher">🎁 Tặng Voucher <b>50K</b> cho lần đặt xe thứ 2</div>
+          <a class="btn primary" href="dat-xe.html" style="justify-content:center">Đặt xe ngay</a>
+          <div class="mini">Email: xeghephanoihaiphong86@gmail.com</div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- PRICING -->
-    <section class="section" id="bang-gia">
-      <div class="section-title">Bảng giá tham khảo</div>
+  <!-- ABOUT -->
+  <section id="gioi-thieu">
+    <!-- BOOKING FORM (Trang chủ) -->
+<section id="dat-xe">
+  <div class="container">
+    <div class="section-title">
+      <h2>Đặt xe nhanh</h2>
+      <p>Điền thông tin – bấm gửi – Zalo mở ra với nội dung đặt xe</p>
+    </div>
+
+    <div class="card booking">
+      <!-- Form -->
+      <div class="box">
+        <h3>📝 Gửi yêu cầu đặt xe</h3>
+        <p class="desc">Phục vụ 24/24h • Tuyến chính: Hà Nội – Hải Phòng – Hạ Long</p>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div>
+              <span class="label">Họ và tên *</span>
+              <input class="inp" id="bk_name" required placeholder="VD: Nguyễn Văn A" />
+            </div>
+            <div>
+              <span class="label">Số điện thoại *</span>
+              <input class="inp" id="bk_phone" required placeholder="VD: 09xxxxxxxx" />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <span class="label">Tuyến đường *</span>
+              <input class="inp" id="bk_route" required placeholder="VD: Hà Nội → Hải Phòng" />
+            </div>
+            <div>
+              <span class="label">Loại dịch vụ *</span>
+              <select class="sel" id="bk_service" required>
+                <option value="Xe ghép">Xe ghép</option>
+                <option value="Xe hợp đồng 5 chỗ">Xe hợp đồng 5 chỗ</option>
+                <option value="Xe hợp đồng 7 chỗ">Xe hợp đồng 7 chỗ</option>
+                <option value="Vận chuyển hàng hóa">Vận chuyển hàng hóa</option>
+                <option value="Đưa đón sân bay/du lịch">Đưa đón sân bay/du lịch</option>
+              </select>
+            </div>
+          </div>
+
+          <span class="label">Ngày/giờ đón *</span>
+          <input class="inp" id="bk_time" type="datetime-local" required />
+
+          <span class="label">Ghi chú thêm</span>
+          <textarea class="txt" id="bk_note" rows="3" placeholder="VD: 3 người + 2 vali / cần đón tận nơi..."></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">
+              <img src="assets/zalo.png" class="zico" alt="Zalo"> Gửi qua Zalo
+            </button>
+
+            <a class="btn" href="dat-xe.html">Mở trang đặt xe riêng</a>
+          </div>
+
+          <div class="small-note">
+            * Sau khi bấm “Gửi qua Zalo”, hệ thống sẽ mở Zalo với nội dung đã điền sẵn.
+          </div>
+        </form>
+      </div>
+
+      <!-- Thông tin nhanh (đẹp + tăng tin tưởng) -->
+      <div class="box" style="border-left:1px solid rgba(255,255,255,.06)">
+        <div class="chip">Thông tin công ty</div>
+
+        <p style="margin:12px 0 0; color:var(--muted)">
+          <b style="color:var(--gold2)">CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN</b><br/>
+          MST: <b style="color:var(--gold2)">0202243189</b><br/>
+          Địa chỉ: Tiểu Trà 1, Phường Hưng Đạo, Thành phố Hải Phòng<br/>
+          Email: xeghephanoihaiphong86@gmail.com
+        </p>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn primary" href="tel:+84936779938">📞 0936 777 998</a>
+          <a class="btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+            <img src="assets/zalo.png" class="zico" alt="Zalo"> Zalo
+          </a>
+          <a class="btn" href="https://www.facebook.com/profile.php?id=100090970607786" target="_blank">🌐 Facebook</a>
+        </div>
+
+        <div class="small-note">Phục vụ 24/24h • Hỗ trợ nhanh – gọi là có</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="container">
+      <div class="section-title">
+        <h2>Giới thiệu công ty</h2>
+        <p>Thông tin doanh nghiệp & cam kết dịch vụ</p>
+      </div>
+
+      <div class="card" style="padding:18px">
+        <p style="margin-top:0">
+          <b>CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN</b> (MST: <b>0202243189</b>)
+          hoạt động trong lĩnh vực vận tải hành khách và vận chuyển hàng hóa liên tỉnh.
+        </p>
+        <p>
+          Chúng tôi cung cấp dịch vụ <b>xe ghép</b>, <b>xe hợp đồng 5–7 chỗ</b>, đưa đón công tác/du lịch,
+          và vận chuyển hàng hóa tuyến <b>Hà Nội – Hải Phòng – Hạ Long</b>.
+        </p>
+        <p style="margin-bottom:0">
+          Với đội ngũ lái xe kinh nghiệm, am hiểu tuyến đường và xe luôn được vệ sinh sạch sẽ,
+          Trường An cam kết <b>an toàn – đúng giờ – giá minh bạch – phục vụ tận tâm</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="dich-vu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Dịch vụ</h2>
+        <p>Đáp ứng đa dạng nhu cầu đi lại & vận chuyển</p>
+      </div>
+
+      <div class="services">
+        <div class="card service">
+          <div class="icon">🚗</div>
+          <h3>Xe ghép liên tỉnh</h3>
+          <p>Tiết kiệm chi phí, linh hoạt thời gian, hỗ trợ đón trả tận nơi.</p>
+        </div>
+        <div class="card service">
+          <div class="icon">🚐</div>
+          <h3>Xe hợp đồng 5–7 chỗ</h3>
+          <p>Đi riêng gia đình/nhóm, chủ động lịch trình, xe đời mới sạch sẽ.</p>
+        </div>
+        <div class="card service">
+          <div class="icon">📦</div>
+          <h3>Vận chuyển hàng hóa</h3>
+          <p>Nhận hàng nhanh, an toàn, giao đúng hẹn (hàng nhẹ/khẩn).</p>
+        </div>
+        <div class="card service">
+          <div class="icon">✈️</div>
+          <h3>Đưa đón sân bay/du lịch</h3>
+          <p>Phục vụ công tác, du lịch, đưa đón theo yêu cầu 24/24h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="bang-gia">
+    <div class="container">
+      <div class="section-title">
+        <h2>Bảng giá tham khảo</h2>
+        <p>Giá có thể thay đổi theo thời điểm, vui lòng liên hệ để báo giá chính xác</p>
+      </div>
 
       <div class="pricing">
         <div class="card price-card">
           <div class="route">
-            <span>Hà Nội ⇄ Hải Phòng</span>
+            <b>Hà Nội ⇄ Hải Phòng</b>
             <span class="from">Từ 400K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><span>400K</span></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><span>900K</span></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><span>1.000K</span></div>
+            <div class="row"><span>Xe ghép</span><b>400K</b></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><b>900K</b></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><b>1.000K</b></div>
           </div>
         </div>
 
         <div class="card price-card">
           <div class="route">
-            <span>Hà Nội ⇄ Hạ Long</span>
+            <b>Hà Nội ⇄ Hạ Long</b>
             <span class="from">Từ 500K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><span>500K</span></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><span>1.100K</span></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><span>1.300K</span></div>
+            <div class="row"><span>Xe ghép</span><b>500K</b></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><b>1.100K</b></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><b>1.300K</b></div>
           </div>
         </div>
 
         <div class="card price-card">
           <div class="route">
-            <span>Hải Phòng ⇄ Hạ Long</span>
+            <b>Hải Phòng ⇄ Hạ Long</b>
             <span class="from">Từ 250K</span>
           </div>
           <div class="rows">
-            <div class="row"><span>Xe ghép</span><span>250K</span></div>
-            <div class="row"><span>Bao xe 5 chỗ</span><span>500K</span></div>
-            <div class="row"><span>Bao xe 7 chỗ</span><span>600K</span></div>
+            <div class="row"><span>Xe ghép</span><b>250K</b></div>
+            <div class="row"><span>Bao xe 5 chỗ</span><b>500K</b></div>
+            <div class="row"><span>Bao xe 7 chỗ</span><b>600K</b></div>
           </div>
         </div>
       </div>
 
-      <div class="card" style="margin-top:12px; padding:10px 14px; text-align:center; color:var(--gold2); font-weight:900;">
-        🎁 Tặng ngay Voucher 50K cho lần đặt xe thứ 2
-      </div>
-    </section>
+      <div class="voucher" style="margin-top:14px">🎁 Tặng Voucher <b>50K</b> cho lần đặt xe thứ 2</div>
+      <div class="note">* Liên hệ Hotline/Zalo 0936779938 để được tư vấn và báo giá theo khung giờ, số khách, hành lý.</div>
+    </div>
+  </section>
 
-    <!-- GALLERY -->
-    <section class="section" id="hinh-anh">
-      <div class="section-title">Hình ảnh xe thực tế</div>
+  <!-- GALLERY -->
+  <section id="hinh-anh">
+    <div class="container">
+      <div class="section-title">
+        <h2>Hình ảnh xe thực tế</h2>
+        <p>Đội xe phục vụ hành khách & hàng hóa</p>
+      </div>
 
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="assets/cars/xe-1.jpg" alt="Xe Trường An 1">
+        <div class="card gallery-item">
+          <img src="assets/cars/xe-1.jpg" alt="Xe Trường An 1" />
           <div class="caption">Xe 5 chỗ – đi ghép / bao xe</div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/cars/xe-2.jpg" alt="Xe Trường An 2">
+        <div class="card gallery-item">
+          <img src="assets/cars/xe-2.jpg" alt="Xe Trường An 2" />
           <div class="caption">Xe 7 chỗ – gia đình, nhóm nhỏ</div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/cars/xe-3.jpg" alt="Xe Trường An 3">
+        <div class="card gallery-item">
+          <img src="assets/cars/xe-3.jpg" alt="Xe Trường An 3" />
           <div class="caption">Xe đường dài – êm ái</div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/cars/xe-4.jpg" alt="Xe Trường An 4">
-          <div class="caption">Sạch sẽ – lịch sự</div>
+        <div class="card gallery-item">
+          <img src="assets/cars/xe-4.jpg" alt="Xe Trường An 4" />
+          <div class="caption">Nội thất sạch sẽ – lịch sự</div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/cars/xe-5.jpg" alt="Xe Trường An 5">
+        <div class="card gallery-item">
+          <img src="assets/cars/xe-5.jpg" alt="Xe Trường An 5" />
           <div class="caption">Phục vụ công tác / du lịch</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <p class="note" style="margin-top:10px">
-      </p>
-    </section>
+  <!-- CONTACT -->
+  <section id="lien-he">
+    <div class="container">
+      <div class="section-title">
+        <h2>Liên hệ & đặt xe</h2>
+        <p>Gọi / Zalo / Form đặt xe riêng</p>
+      </div>
 
-    <div class="footer">
-      © Vận Tải Trường An • Hotline: 0936 77 99 38 • Zalo: 0936 77 99 38
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <div class="chip">Hotline/Zalo</div>
+          <div class="bigphone">0936 777 998</div>
+          <p class="smallmuted">Phục vụ 24/24h • Tuyến chính: Hà Nội – Hải Phòng – Hạ Long</p>
+
+          <div class="contact-actions">
+            <a class="btn primary" href="tel:+84936779938">📞 Gọi ngay</a>
+            <a class="btn" href="dat-xe.html">📝 Đặt xe nhanh</a>
+            <a class="btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
+              <span class="ico"><img src="assets/zalo.png" alt="Zalo" style="width:18px;height:18px;border-radius:50%;background:#fff;"></span>
+              Zalo
+            </a>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <div class="chip">Thông tin doanh nghiệp</div>
+          <p class="smallmuted" style="margin-top:10px">
+            <b>CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN</b><br/>
+            MST: <b>0202243189</b><br/>
+            Địa chỉ: Tiểu Trà 1, Phường Hưng Đạo, Thành phố Hải Phòng<br/>
+            Email: xeghephanoihaiphong86@gmail.com<br/>
+            Facebook: <a href="https://www.facebook.com/profile.php?id=100090970607786" target="_blank" style="color:var(--gold2); font-weight:900;">Trang Facebook</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <b>CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN</b><br/>
+      MST: 0202243189 • Địa chỉ: Tiểu Trà 1, Phường Hưng Đạo, Thành phố Hải Phòng<br/>
+      Hotline/Zalo: 0936779938 • Email: xeghephanoihaiphong86@gmail.com<br/>
+
+      <div class="cols">
+        <div class="card" style="padding:14px">
+          <b>Dịch vụ</b>
+          <ul class="list">
+            <li>Xe ghép liên tỉnh Hà Nội – Hải Phòng – Hạ Long</li>
+            <li>Xe hợp đồng 5–7 chỗ</li>
+            <li>Vận chuyển hàng hóa, hồ sơ, tài liệu</li>
+            <li>Đưa đón sân bay / du lịch / công tác</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:14px">
+          <b>Khu vực hoạt động</b>
+          <ul class="list">
+            <li>Hà Nội</li>
+            <li>Hải Phòng</li>
+            <li>Hạ Long</li>
+            <li>Các tỉnh lân cận</li>
+          </ul>
+          <div class="mini">© <span id="y"></span> Trường An Transport</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- FLOATING BUTTONS (KHÔNG BỊ ĐÈ) -->
-  <div class="float-stack">
-    <!-- Nút gọi -->
-    <a class="float-btn call" href="tel:0936779938" aria-label="Gọi ngay">
-      <!-- Phone icon -->
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
-      </svg>
-    </a>
-
-    <!-- Nút Zalo (LOGO) -->
+  <!-- Floating buttons (KHÔNG BỊ ĐÈ, chỉ 2 nút) -->
+  <div class="float-stack" aria-label="Liên hệ nhanh">
+    <a class="float-btn call" href="tel:+84936779938" aria-label="Gọi ngay">📞</a>
     <a class="float-btn" href="https://zalo.me/0936779938" target="_blank" aria-label="Chat Zalo">
       <img src="assets/zalo.png" alt="Zalo">
     </a>
   </div>
-</body>
+
   <script>
-document.getElementById("dat-xe-form").addEventListener("submit", function(e){
-  e.preventDefault();
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
-  const ten = document.getElementById("ten").value;
-  const sdt = document.getElementById("sdt").value;
-  const tuyen = document.getElementById("tuyen").value;
-  const thoigian = document.getElementById("thoigian").value;
-  const ghichu = document.getElementById("ghichu").value;
+    const name = document.getElementById("bk_name").value.trim();
+    const phone = document.getElementById("bk_phone").value.trim();
+    const route = document.getElementById("bk_route").value.trim();
+    const service = document.getElementById("bk_service").value;
+    const time = document.getElementById("bk_time").value;
+    const note = document.getElementById("bk_note").value.trim();
 
-  const msg =
-    "🚗 *ĐẶT XE TRƯỜNG AN*\n\n" +
-    "👤 Tên: " + ten + "\n" +
-    "📞 SĐT: " + sdt + "\n" +
-    "📍 Tuyến: " + tuyen + "\n" +
-    "⏰ Thời gian: " + thoigian + "\n" +
-    "📝 Ghi chú: " + ghichu;
+    const msg =
+      "🚗 *ĐẶT XE – TRƯỜNG AN*\n\n" +
+      "🏢 Công ty: CÔNG TY TNHH VẬN TẢI HÀNH KHÁCH VÀ HÀNG HÓA TRƯỜNG AN\n" +
+      "👤 Họ tên: " + name + "\n" +
+      "📞 SĐT: " + phone + "\n" +
+      "🧾 Dịch vụ: " + service + "\n" +
+      "📍 Tuyến: " + route + "\n" +
+      "⏰ Thời gian: " + time + "\n" +
+      "📝 Ghi chú: " + (note || "Không") + "\n\n" +
+      "Xin tư vấn & xác nhận giúp tôi.";
 
-  const url = "https://zalo.me/0936779938?text=" + encodeURIComponent(msg);
-  window.open(url, "_blank");
-});
+    window.open("https://zalo.me/0936779938?text=" + encodeURIComponent(msg), "_blank");
+  });
 </script>
-
+</body>
 </html>
