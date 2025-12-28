@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dohuyen2904.github.io/vantaitruongan.github.io/sitemap.xml
