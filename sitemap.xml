@@ -3,25 +3,27 @@
 
   <url>
     <loc>https://vantaitruongan.vn/</loc>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-12-29</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://vantaitruongan.vn/ha-noi-hai-phong.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://vantaitruongan.vn/dat-xe.html</loc>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://vantaitruongan.vn/hai-phong-ha-noi.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://vantaitruongan.vn/xe-ghep-ha-noi-hai-phong.html</loc>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://vantaitruongan.vn/ha-noi-ha-long.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://vantaitruongan.vn/xe-ghep-hai-phong-ha-noi.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://vantaitruongan.vn/xe-ghep-ha-noi-ha-long.html</loc>
     <priority>0.9</priority>
   </url>
 
