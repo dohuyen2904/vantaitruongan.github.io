@@ -69,6 +69,67 @@
 
 
   <style>
+    /* Routes (3 tuyến) */
+.routes-card{
+  margin-top:20px;
+  padding:18px;
+  border-radius:18px;
+  border:1px solid rgba(214,178,94,.22);
+  background: rgba(255,255,255,.04);
+}
+.routes-head h3{
+  margin:0 0 6px;
+  font-size:18px;
+}
+.routes-head p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px;
+}
+.routes-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+.route-item{
+  display:block;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.22);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.route-item:hover{
+  transform: translateY(-2px);
+  border-color: rgba(214,178,94,.45);
+}
+.route-title{
+  font-weight:900;
+  color: #fff;
+  font-size:16px;
+}
+.route-desc{
+  margin-top:6px;
+  color: var(--muted);
+  font-size:13px;
+}
+.route-cta{
+  margin-top:10px;
+  font-weight:900;
+  color: var(--gold2);
+  font-size:13px;
+}
+.routes-actions{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* Mobile */
+@media (max-width: 820px){
+  .routes-grid{ grid-template-columns:1fr; }
+}
     /* ==== MOBILE SAFE WIDTH ==== */
 *{
   box-sizing:border-box;
@@ -821,39 +882,36 @@ html,body{
         </div>
       </div>
     </div>
-    <!-- CÁC TUYẾN XE GHÉP PHỔ BIẾN (SEO) -->
-<div class="card" style="margin-top:24px">
-  <h3 style="margin-bottom:12px">Các tuyến xe ghép phổ biến</h3>
+    <!-- CÁC TUYẾN XE GHÉP PHỔ BIẾN (SEO + UI) -->
+<div class="routes-card">
+  <div class="routes-head">
+    <h3>Các tuyến xe ghép phổ biến</h3>
+    <p>Chọn tuyến để xem thông tin chi tiết & đặt xe nhanh.</p>
+  </div>
 
-  <ul style="padding-left:18px; line-height:1.8">
-    <li>
-      <a href="xe-ghep-ha-noi-hai-phong.html"
-         style="font-weight:700; color:var(--gold2)">
-        Xe ghép Hà Nội – Hải Phòng
-      </a>
-      – Đón tận nơi, chạy liên tục trong ngày
-    </li>
+  <div class="routes-grid">
+    <a class="route-item" href="xe-ghep-ha-noi-hai-phong.html">
+      <div class="route-title">Hà Nội → Hải Phòng</div>
+      <div class="route-desc">Đón tận nơi • Chạy linh hoạt trong ngày</div>
+      <div class="route-cta">Xem chi tiết tuyến →</div>
+    </a>
 
-    <li>
-      <a href="xe-ghep-hai-phong-ha-noi.html"
-         style="font-weight:700; color:var(--gold2)">
-        Xe ghép Hải Phòng – Hà Nội
-      </a>
-      – Phù hợp đi công tác, về quê
-    </li>
+    <a class="route-item" href="xe-ghep-hai-phong-ha-noi.html">
+      <div class="route-title">Hải Phòng → Hà Nội</div>
+      <div class="route-desc">Phù hợp đi công tác, về quê</div>
+      <div class="route-cta">Xem chi tiết tuyến →</div>
+    </a>
 
-    <li>
-      <a href="xe-ghep-ha-noi-ha-long.html"
-         style="font-weight:700; color:var(--gold2)">
-        Xe ghép Hà Nội – Hạ Long
-      </a>
-      – Xe đời mới, giá rõ ràng
-    </li>
-  </ul>
+    <a class="route-item" href="xe-ghep-ha-noi-ha-long.html">
+      <div class="route-title">Hà Nội → Hạ Long</div>
+      <div class="route-desc">Xe đời mới • Giá rõ ràng</div>
+      <div class="route-cta">Xem chi tiết tuyến →</div>
+    </a>
+  </div>
 
-  <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+  <div class="routes-actions">
     <a class="btn primary" href="#dat-xe">Đặt xe ngay</a>
-    <a class="btn" href="xe-ghep-ha-noi-hai-phong.html">Xem chi tiết tuyến</a>
+    <a class="btn" href="xe-ghep-ha-noi-hai-phong.html">Xem tuyến nổi bật</a>
   </div>
 </div>
   </section>
