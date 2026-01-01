@@ -660,6 +660,44 @@ html,body{
     text-align:center;
   }
 }
+    
+/* Nút Chat Zalo giống style nút .btn */
+.actions .chat-zalo{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+
+/* Icon trong nút */
+.actions .chat-zalo .icon-img{
+  width:18px;
+  height:18px;
+  display:block;
+}
+
+/* MOBILE: căn giữa + full width theo hàng (tràn đều) */
+@media (max-width: 768px){
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  /* Các nút trong actions sẽ có cùng độ rộng đẹp */
+  .actions .btn,
+  .actions .chip{
+    flex: 1 1 calc(50% - 10px); /* 2 cột */
+    text-align:center;
+    justify-content:center;
+  }
+
+  /* Nút hotline (primary) cho full hàng dưới nếu muốn nổi bật */
+  .actions .btn.primary{
+    flex: 1 1 100%;
+  }
+}
 
   </style>
   <script type="application/ld+json">
@@ -705,8 +743,13 @@ html,body{
           <a class="btn" href="#bang-gia">Bảng giá</a>
 
           <!-- Zalo = logo (không chữ) -->
-          <a class="menu-btn chat-zalo"
-           href="https://zalo.me/0936779938"target="_blank"aria-label="Chat Zalo"><img src="assets/zalo.png" alt="Zalo">Chat
+          <!-- Zalo (giống các nút btn khác) -->
+          <a class="btn chat-zalo"
+             href="https://zalo.me/0936779938"
+             target="_blank" rel="noopener"
+             aria-label="Chat Zalo">
+            <img src="assets/zalo.png" class="icon-img" alt="Zalo">
+            <span>Chat</span>
           </a>
 
           <a class="btn primary" href="tel:+84936779938">📞 0936 77 99 38</a>
